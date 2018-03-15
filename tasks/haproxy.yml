@@ -83,6 +83,13 @@
     value=1
     state=present
     ignoreerrors=yes
+    
+- name: Enable routing for HAProxy hosts (verify this uncomments forwarding)
+  sysctl: >
+    name=net.ipv4.ip_forward=1
+    value=1
+    state=present
+    ignoreerrors=yes
 
 - name: Ensure haproxy is started
   service: >

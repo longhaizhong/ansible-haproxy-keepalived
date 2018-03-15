@@ -1,19 +1,19 @@
 ---
 # Keepalived config
 keepalived_bind_interface: eth1
-keepalived_vip: 192.168.99.220
+keepalived_vip: 10.0.0.3
 
 # HAProxy setting
-haproxy_bind_address: 192.168.99.220
+haproxy_bind_address: 10.0.0.3
 haproxy_user: haproxy
-haproxy_major_version: 1.7
-haproxy_minor_version: 5
+haproxy_major_version: 1.8
+haproxy_minor_version: 4
 haproxy_download_url: "http://www.haproxy.org/download/{{ haproxy_major_version }}/src/haproxy-{{ haproxy_major_version }}.{{ haproxy_minor_version }}.tar.gz"
 haproxy_src_dir: /tmp
 haproxy_make_option: TARGET=linux2628 CPU=x86_64 USE_OPENSSL=1 USE_ZLIB=1 USE_PCRE=1 USE_LINUX_TPROXY=1
 haproxy_balancing_servers:
-  - { name: 's1', ip: "192.168.99.105" }
-  - { name: 's2', ip: "192.168.99.104" }
+  - { name: 'haproxy1', ip: "10.0.0.1" }
+  - { name: 'haproxy2', ip: "10.0.0.2" }
 
 # hatop
 hatop_version: 0.7.7

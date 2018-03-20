@@ -1,6 +1,6 @@
 [default] 
-haproxy1 ansible_ssh_host=10.0.0.1 keepalived_priority=100
-haproxy2 ansible_ssh_host=10.0.0.2 keepalived_priority=101
+haproxy1 ansible_ssh_host=10.0.0.1 keepalived_priority=101
+haproxy2 ansible_ssh_host=10.0.0.2 keepalived_priority=100
 
 [all:vars]
 ansible_ssh_user=vagrant

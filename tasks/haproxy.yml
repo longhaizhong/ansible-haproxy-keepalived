@@ -1,4 +1,7 @@
 ---
+- name: set_hostname
+  hostname: name={{ inventory_hostname }}
+
 - name: Ensure dependencies are installed
   yum: name={{ item }} state=installed
   with_items:

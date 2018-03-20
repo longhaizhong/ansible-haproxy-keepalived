@@ -1,4 +1,4 @@
 ---
-- include: haproxy.yml
+- include_tasks: haproxy.yml
 - include: hatop.yml
 - include: keepalived.yml

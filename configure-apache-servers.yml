@@ -3,4 +3,4 @@
       
   tasks:
     - name: Copy file to host
-      copy: src=file.{{ inventory_hostname }} dest=/var/www/html/index.html
+      copy: src={{ inventory_hostname }} dest=/var/www/html/index.html

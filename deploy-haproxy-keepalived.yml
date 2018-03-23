@@ -4,3 +4,8 @@
   
   tasks:
     - include_tasks: tasks/main.yml
+
+- hosts: apache
+  
+  tasks:
+    - include_tasks: tasks/configure-apache-servers.yml

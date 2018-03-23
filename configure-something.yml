@@ -5,5 +5,5 @@
   - name: update /etc/hosts file
     blockinfile:
       dest: /etc/hosts
-      content: "{{ lookup('template', 'templates/etc/hosts.j2') }}"
+      content: "{{ lookup('template', 'templates/hosts.j2') }}"
       state: present

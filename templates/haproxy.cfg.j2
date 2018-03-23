@@ -19,7 +19,7 @@ frontend vip1
     bind {{ haproxy_bind_address }}:80
     mode http
     maxconn 30000
-    default_backend apache-servers
+    default_backend servers1
 
 backend servers1
     mode http 

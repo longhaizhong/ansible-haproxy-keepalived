@@ -1,3 +1,6 @@
 ---
+- name: set_hostname
+  hostname: name={{ inventory_hostname }}
+  
 - name: Copy file to host
   copy: src={{ inventory_hostname }} dest=/var/www/html/index.html

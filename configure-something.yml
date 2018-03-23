@@ -1,6 +1,9 @@
 ---
-- hosts: apache
+- hosts: all
       
   tasks:
-    - name: Copy file to host
-      copy: src={{ inventory_hostname }} dest=/var/www/html/index.html
+  - name: update /etc/hosts file
+    blockinfile:
+      dest: /etc/hosts
+      content: "{{ lookup('template', 'templates/etc/hosts.j2') }}"
+      state: present

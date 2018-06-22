@@ -9,3 +9,9 @@
   
   tasks:
     - include_tasks: tasks/configure-apache-servers.yml
+    
+- hosts: all
+
+  tasks:
+    - include_tasks: tasks/populate-etc-hosts-file.yml
+    
